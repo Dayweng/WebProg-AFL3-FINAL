@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact | DRW</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;900&family=Playfair+Display:wght@700&display=swap"
+        rel="stylesheet" />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        poppins: ['Poppins', 'sans-serif'],
+                        playfair: ['"Playfair Display"', 'serif'],
+                    },
+                    colors: {
+                        'steel-blue': '#698197',
+                    },
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body class="font-poppins text-white overflow-x-hidden">
+    <!--main header -->
+    <header id="site-header" class="fixed top-0 left-0 right-0 z-50 h-[105px]">
+        <div class="absolute inset-0 bg-gradient-to-b from-black/85 to-transparent"></div>
+        <nav class="relative z-10 flex items-center justify-between h-full max-w-[1400px] mx-auto nav-pad">
+            <a href="#home" class="flex-shrink-0">
+                <img src="https://cdn.discordapp.com/attachments/967409584740368444/1503043384325963869/logo.png?ex=6a01e9bc&is=6a00983c&hm=7bd8bbbc7d2814e4e09cc83465fb273bff96dd39f7156a981c40d188cc1d3197&"
+                    alt="Darren Wibisono" class="w-[160px] h-[37px] object-contain" />
+            </a>
+
+            <ul id="nav-links" class="gap-[50px] list-none">
+                <li><a href="index.html"
+                        class="text-white text-lg font-medium tracking-wide hover:opacity-70 transition-opacity">Home</a>
+                </li>
+                <li><a href="aboutMe.html"
+                        class="text-white text-lg font-medium tracking-wide hover:opacity-70 transition-opacity">About</a>
+                </li>
+                <li><a href="gallery.html"
+                        class="text-white text-lg font-medium tracking-wide hover:opacity-70 transition-opacity">Gallery</a>
+                </li>
+            </ul>
+
+            <a href="contact.html"
+                class="nav-desktop-only bg-transparent border border-white/50 text-white px-5 py-2.5 text-lg font-medium rounded hover:bg-white/10 transition-colors flex-shrink-0 inline-flex items-center justify-center">
+                Contact Me
+            </a>
+
+            <!--mobile hamburger menu-->
+            <button id="hamburger"
+                class="nav-mobile-only flex-col gap-[5px] bg-transparent border-none cursor-pointer p-1"
+                aria-label="Open menu">
+                <span class="block w-6 h-0.5 bg-white rounded"></span>
+                <span class="block w-6 h-0.5 bg-white rounded"></span>
+                <span class="block w-6 h-0.5 bg-white rounded"></span>
+            </button>
+        </nav>
+
+        <div id="mobile-menu" class="flex-col items-center gap-6 py-6 bg-black/60 border-t border-white/10">
+            <a href="index.html" class="text-white text-lg font-medium" onclick="closeMobileMenu()">Home</a>
+            <a href="aboutMe.html" class="text-white text-lg font-medium" onclick="closeMobileMenu()">About</a>
+            <a href="gallery.html" class="text-white text-lg font-medium" onclick="closeMobileMenu()">Gallery</a>
+            <button
+                class="bg-transparent border border-white/50 text-white px-5 py-2 text-base font-medium rounded">Contact
+                Me</button>
+        </div>
+    </header>
+
+    <div class="page-bg" style="min-height: 100vh;">
+
+        <!--contact text bg-->
+        <div class="contact-watermark">CONTACT</div>
+        <div class="contact-body">
+            <!--left col content-->
+            <div class="contact-left">
+                <div class="contact-label">
+                    <div class="contact-label-dot">✉</div>
+                    Contact
+                </div>
+
+                <div>
+                    <h1 class="contact-heading">Get in touch</h1>
+                    <p class="contact-subtext" style="margin-top: 12px;">
+                        Have a project in mind, want to collaborate, or just want to say hello?
+                    </p>
+                </div>
+
+                <!--sosmed boxes-->
+                <div class="contact-cards">
+
+                    <a href="https://linkedin.com/in/darren-wibisono" class="contact-card">
+                        <div class="contact-card-left">
+                            <div class="contact-card-icon">🔗</div>
+                            <div>
+                                <div class="contact-card-title">Linked In</div>
+                                <div class="contact-card-value">linkedin.com/in/darren-wibisono</div>
+                            </div>
+                        </div>
+                    </a>
+
+                    <a href="https://www.instagram.com/darren_wibisono" target="_blank" class="contact-card">
+                        <div class="contact-card-left">
+                            <div class="contact-card-icon">📷</div>
+                            <div>
+                                <div class="contact-card-title">Instagram</div>
+                                <div class="contact-card-value">@darren_wibisono</div>
+                            </div>
+                        </div>
+                    </a>
+
+                    <a href="https://maps.app.goo.gl/R8QFxJJumHwJHrsd7" class="contact-card">
+                        <div class="contact-card-left">
+                            <div class="contact-card-icon">📍</div>
+                            <div>
+                                <div class="contact-card-title">Based in</div>
+                                <div class="contact-card-value">Surabaya, Indonesia</div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <!--right col content-->
+            <div class="contact-right">
+                <input type="text" class="contact-input" placeholder="Name" />
+                <input type="email" class="contact-input" placeholder="Email" />
+                <textarea class="contact-textarea" placeholder="Message"></textarea>
+                <button id="submitbtn" class="contact-submit">Submit</button>
+            </div>
+        </div>
+
+        <!--footer-->
+        <footer class="site-footer bg-steel-blue flex items-center justify-between">
+            <img src="https://cdn.discordapp.com/attachments/967409584740368444/1503043384325963869/logo.png?ex=6a01e9bc&is=6a00983c&hm=7bd8bbbc7d2814e4e09cc83465fb273bff96dd39f7156a981c40d188cc1d3197&"
+                alt="DRW Logo" class="w-[93px] h-auto" />
+            <p class="footer-text text-white/50 font-medium tracking-wide">
+                Created by <strong class="text-white font-bold">Darren Wibisono</strong> | All Reserved
+            </p>
+        </footer>
+    </div>
+    <script src="main.js"></script>
+</body>
+
+</html>
