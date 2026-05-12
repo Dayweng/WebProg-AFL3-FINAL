@@ -1,5 +1,6 @@
 const hamburger = document.getElementById('hamburger');
 const mobileMenu = document.getElementById('mobile-menu');
+let autoSlide = setInterval(nextSlide, 3000);
 
 //mobile hamburg menu
 hamburger.addEventListener('click', () => {
@@ -56,8 +57,6 @@ if (next && prev && imgWarp) {
         imgWarp.style.transform =
             `translateX(${-idx * 100}%)`;
     }
-
-    let autoSlide = setInterval(nextSlide, 3000);
 
     next.onclick = () => {
         nextSlide();
